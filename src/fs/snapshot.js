@@ -9,7 +9,7 @@ const snapshot = async () => {
       await fs.access(workspacePath);
       } catch {
       await fs.mkdir(workspacePath, { recursive: true });
-      console.log("Folder 'workspace' został utworzony automatycznie.");
+      console.log("Automatically creates the 'workspace' directory if it does not exist.");
     }
   
     const entries = [];

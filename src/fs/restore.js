@@ -14,7 +14,7 @@ const restore = async () => {
     try {
       await fs.access(restorePath);
       await fs.rm(restorePath, { recursive: true, force: true });
-      console.log("Existing folder 'workspace_restored' removed.");
+
     } catch(error) {
       if (error.code !== "ENOENT") throw error;
     }
@@ -35,9 +35,8 @@ const restore = async () => {
         await fs.writeFile(entryPath, buffer);
       }
     }
-    console.log(`Restore completed in folder: ${restorePath}`);
+ 
   } catch (error) {
- console.error("FS operation failed:", error.message);
   throw new Error("FS operation failed");
 } 
 };

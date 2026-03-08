@@ -23,6 +23,7 @@ const interactive = () => {
       console.log('Goodbye!');
       rl.close();
       return
+
     } else {
       console.log('Unknown command');
     }
